@@ -40,7 +40,7 @@ pipeline {
                 input 'Deploy to Production?'
                 milestone(1)
                script {
-                 sh 'kubectl apply -f deployment.yaml'
+                 sh 'kubectl apply -f train-schedule-kube.yaml'
               } 
             }
         }
