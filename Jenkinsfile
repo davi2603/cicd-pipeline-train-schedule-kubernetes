@@ -40,7 +40,7 @@ pipeline {
                 input 'Deploy to Production?'
                 milestone(1)
                script {
-                 kubernetesDeploy(configs: "deployment.yaml", "service.yaml")
+                 kubectl apply -f deployment.yaml 
               } 
             }
         }
